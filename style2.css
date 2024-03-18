@@ -127,6 +127,7 @@ header {
     font-size: 22px;
     line-height: 2;
     max-width: 80%; /* Set maximum width for paragraph contents */
+    margin-bottom: 0;
 }
 
 @media (max-width: 992px) {
@@ -135,8 +136,8 @@ header {
     }
     
     .introduction-section p {
-        font-size: 16px;
-        max-width: 80%; /* Adjust maximum width for medium screens if needed */
+        font-size: 18px;
+        max-width: 85%; /* Adjust maximum width for medium screens if needed */
     }
 }
 
@@ -147,7 +148,8 @@ header {
     
     .introduction-section p {
         font-size: 12px;
-        max-width: 60%; /* Allow paragraph contents to take full width on mobile screens */
+        max-width: 75%; 
+        align-items: normal;/* Allow paragraph contents to take full width on mobile screens */
     }
 }
 
@@ -162,7 +164,7 @@ header {
     padding: 0;
     color: #fff;
     /* margin-top: 30px; */
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   
   .team-container {
@@ -209,6 +211,12 @@ header {
       grid-auto-rows: auto; /* Auto height for rows */
       gap: 2px; /* Adjusted gap between items */
       justify-content: center; /* Center items horizontally */
+      align-items: center;
+      text-align: center;
+    }
+    .our-team {
+    
+font-size: 22px;
     }
     
     .team-img {
@@ -218,6 +226,7 @@ header {
       overflow: hidden;
       border: 3px solid black;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      align-items: center;
     }
   }
   
@@ -306,6 +315,8 @@ header {
     .team-info {
       flex-direction: column; /* Stack items vertically */
       align-items: center;
+      text-align: center;
+      width: 80%;
     }
   
     .profile-info {
@@ -319,8 +330,16 @@ header {
     .name, .status, .about {
     color: #fff; /* Text color white */
     /* text-align: center; */
-    width: 300px;
+    width: 310px;
     line-height: 1.5;
+    height: auto;
+    align-items: center;
+    
+  }
+  .status, .about {
+    font-size: 12px;
+    line-height: 2;
+    margin-right: 15px;
   }
   }
   
