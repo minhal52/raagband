@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.6); /* Light black with 50% opacity */
 }
 
 .main {
@@ -39,7 +40,7 @@ body, html {
     /* Adjust margin top and bottom for the introduction section */
     .introduction-section {
         padding: 30px 10px;
-        margin-top: 50px;
+        /* margin-top: 50px; */
         margin-bottom: 50px;
     }
 
@@ -56,8 +57,8 @@ body, html {
     /* background-color: rgba(240, 240, 240, 0.8); Light color with opacity */
     /* background-size: cover; */
     text-align: center;
-    padding: 100px 0;
-    min-height: 100vh; /* Set min-height to cover entire viewport height */
+    /* padding: 100px 0; */
+    min-height: 80vh; /* Set min-height to cover entire viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,16 +99,16 @@ body, html {
     margin: 0 auto;
 }
 
-.title {
-    font-size: 36px;
+/* .title {
+    font-size: 46px;
     margin-bottom: 20px;
-}
+} */
 
-.subtitle {
-    font-size: 24px;
-    color:#fff;
-    font-weight: bolder;
-    margin-bottom: 20px; /* Reduced margin for navigation links */
+.subtitle  {
+    font-size: 14px;
+margin-top: 0;
+    color: #fff; /* Set text color to white */
+
 }
 
 .nav-links ul {
@@ -177,7 +178,7 @@ body, html {
 }
 
 /* Book now button styles */
-/* .book-now-btn {
+.book-now-btn {
     background-color: #fff;
     color: black;
     height: 50px;
@@ -193,9 +194,10 @@ body, html {
     background-color:transparent;
     box-sizing: border-box;
     border: 2px solid #fff;
-} */
+    color: #fff;
+}
 
-.book-now-btn {
+/* .book-now-btn {
     font-size: 30px;
     padding: 20px ;
     color: #000000;
@@ -224,18 +226,12 @@ transform: translateX(0);
 }
 .book-now-btn:hover{
     color: #000000;
-}
+} */
 /* Hero page styles */
-.hero-page {
-    /* Other styles remain the same */
-    padding: 50px 0; /* Adjust padding for medium and smaller screens */
-}
 
 /* Media query for mobile screens */
 @media only screen and (max-width: 767px) {
-    .hero-page {
-        padding: 30px 0; /* Adjust padding for mobile screens */
-    }
+   
     
 .nav-links ul li a {
     text-decoration: none;
@@ -262,10 +258,11 @@ transform: translateX(0);
     z-index: 1;
     cursor: pointer;
     position: relative;
-    padding: 20px;
+    /* padding: 20px; */
     overflow: hidden; /* Add this line to remove scrollbar */
     background: transparent; /* Combine background properties */
     max-height: 100vh; /* Limit height to viewport height */
+    margin-bottom: 0;
 }
 
 /* Waves */
@@ -293,16 +290,23 @@ transform: translateX(0);
     }
 }
 .waves-demo {
-    font-size: 40px; /* Adjust font size for mobile screens */
+    font-size: 90px; /* Adjust font size for mobile screens */
     padding: 10px; /* Adjust padding for mobile screens */
 }
 
 @media (max-width: 768px) {
     .waves-demo {
-        font-size: 30px; /* Adjust font size for smaller screens */
-        padding: 5px; /* Adjust padding for smaller screens */
+        font-size: 40px; /* Adjust font size for smaller screens */
+        /* padding: 5px; Adjust padding for smaller screens */
     }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+    .waves-demo {
+        font-size: 70px; /* Adjust font size for medium screens */
+        /* padding: 10px; Adjust padding for medium screens */
+    }
+}
+
 
 
 /* ========================INTRODUCTION / ABOUT US SECTION ================ */
@@ -312,9 +316,9 @@ transform: translateX(0);
     color: #fff;
     text-align: center;
     /* padding: 50px 20px; Adjust the padding as needed */
-    height: 100vh;
-    margin-top: 5px;
-    top: 40px;
+    height: 60vh;
+    /* margin-top: 5px;/ */
+    /* top: 40px; */
     position: relative; /* Add position relative */
 }
 
@@ -366,7 +370,7 @@ transform: translateX(0);
 /* Media query for larger screens */
 @media only screen and (min-width: 768px) {
     .introduction-section {
-        height: 100vh; /* Reset height for larger screens */
+        height: 60vh; /* Reset height for larger screens */
         padding: 0; /* Reset padding for larger screens */
     }
 
@@ -385,7 +389,7 @@ transform: translateX(0);
 
     /* =============================know more button=========================== */
     /* Know More button styles */
-    .know-more-btn {
+    /* .know-more-btn {
         font-size: 30px;
         padding: 10px ;
         color: #000000;
@@ -419,8 +423,31 @@ transform: translateX(0);
         text-decoration: none;
         color: black;
     }
-  
-  
+   */
+   .know-more-btn {
+    background-color: #fff;
+    color: black;
+    height: 50px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   }
+   .know-more-btn:hover {
+    background-color:transparent;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    color: #fff;
+}
+.know-more-btn a:hover {
+    color: #fff;
+}
+.know-more-btn a{
+    text-decoration: none;
+    color: black;
+}
 /* ====================COUNTER CONTAINER================== */
 
 
@@ -461,7 +488,7 @@ h1 {
 
 /* Grid */
 .container1 {
-    width: 90%; /* Adjust width as needed */
+    width: 920px; /* Adjust width as needed */
     max-width: 1200px; /* Set maximum width */
     margin: 0 auto; /* Center the container horizontally */
     height: auto; /* Adjust height as needed */
@@ -694,8 +721,8 @@ input:valid~label {
 
     .contact-container::before,
     .contact-container::after {
-        height: 150px;
-        width: 450px;
+        height: 750px;
+        width: 750px;
     }
 
     .form-box {
@@ -720,4 +747,102 @@ footer {
     bottom: 0;
     width: 100%;
     top: 2px;
+}
+
+
+/* ==================counting numbers==================== */
+
+.container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counter-numbers {
+    color: #fff;
+    margin: 0; /* Reset margin */
+    font-size: 40px;
+    text-align: center;
+}
+
+.container2 p {
+    margin-top: 5px; /* Adjust the margin-top value */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* ===========gallery=============== */
+/* gallery */
+h1 {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 38px;
+    text-align: center;
+    color: #fff;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+
+.container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    transition: transform 0.5s ease; /* Add transition for transform */
+}
+
+.container img:hover {
+    transform: scale(1.1); /* Zoom in effect */
+}
+
+/* Grid */
+.container {
+    width: 90%; /* Adjust width as needed */
+    max-width: 1200px; /* Set maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    height: auto; /* Adjust height as needed */
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 125px;
+    grid-auto-flow: dense; /* Fill all spaces with fitted images */
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.wrapper {
+    width: 100vw; /* Set width to cover entire viewport width */
+    height: 100vh; /* Set height to cover entire viewport height */
+}
+
+.wrapper h1 {
+    align-items: center;
+    padding: 50px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+    }
 }

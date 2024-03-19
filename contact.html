@@ -8,31 +8,54 @@
 </head>
 <body>
     <body>
-        <header>
-            <div class="header-logo1">
-              <img src="images/rtbnlogo.png" class="logo1" alt="Logo">
-            </div>
-            <nav class="header-nav">
-              <a href="index.html">Home</a>
-              <a href="aboutus.html">About</a>
-              <a href="gallery.html">Gallery</a>
-              <a href="contact.html">Contact</a>
-              <!-- Add more navigation links as needed -->
-            </nav>
-            <div class="header-social">
-              <div class="social-icons1">
-                <button>   <a href="https://www.facebook.com/YouSavad?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
-                <button>  <a href="https://instagram.com/raagthebandbengaluru?igshid=YmMyMTA2M2Y" target="_blank"><i class="fab fa-instagram"></i></a></button>
-                <button>  <a href="https://wa.me/message/WZQNY3EAESPNB1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <button> <a href="https://youtube.com/@raagthebandbengaluru" target="_blank"><i class="fab fa-youtube"></i></a></button>
-                    <button><i class="fas fa-envelope"></i></button>
-            </div>
-            </div>
-          </header>
+        <header class="header-area">
+            <!-- site-navbar start -->
+            <div class="navbar-area">
+                <div class="container">
+                    <nav class="site-navbar">
+                        <!-- site logo -->
+                        <!-- site logo -->
+    
+                        <img class="site-logo" src="images/rtbnlogo.png" alt="Logo">
+                        </a>
+    
+    
+                        <!-- site menu/nav -->
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="aboutus.html">About</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                          </ul>
+    
+                        <!-- nav-toggler for mobile version only -->
+                        <button class="nav-toggler">
+                            <span></span>
+                        </button>
+                        <div class="header-social">
+                            <div class="social-icons1">
+                                <button> <a href="https://www.facebook.com/YouSavad?mibextid=LQQJ4d" target="_blank"><i
+                                            class="fab fa-facebook"></i></a>
+                                    <button> <a href="https://instagram.com/raagthebandbengaluru?igshid=YmMyMTA2M2Y"
+                                            target="_blank"><i class="fab fa-instagram"></i></a></button>
+                                    <button> <a href="https://wa.me/message/WZQNY3EAESPNB1" target="_blank"><i
+                                                class="fab fa-whatsapp"></i></a>
+                                        <button> <a href="https://youtube.com/@raagthebandbengaluru" target="_blank"><i
+                                                    class="fab fa-youtube"></i></a></button>
+                                        <button><i class="fas fa-envelope"></i></button>
+                            </div>
+                        </div>
+                    </nav>
+    
+                </div>
+            </div><!-- navbar-area end -->
+    
+    
+        </header>
   <body>
   
   <!-- ===============CONTACT CONTAINER================== -->
-<div class="contact-container">
+  <div class="contact-container">
     <div class="image">
         <div class="form-box">
             <div class="form">
@@ -56,17 +79,12 @@
                 <div class="input-box">
                     <input type="text" id="eventDate" name="eventDate" placeholder="" pattern="\d{4}-\d{2}-\d{2}" required />
                     <label for="eventDate">Event Date</label>
-                    <!-- <small>Please enter the date in YYYY-MM-DD format.</small> -->
                 </div>
                 <div class="input-box">
                     <input type="text" id="eventPlace" name="eventPlace" required />
                     <label for="eventPlace">Venue</label>
                 </div>
-                <!-- <div class="input-box">
-                    <input type="number" id="bandsRequired" name="bandsRequired" required />
-                    <label for="bandsRequired">No. of Bands Required</label>
-                </div> -->
-                <button class="book" type="submit"><a href="https://wa.me/message/WZQNY3EAESPNB1" target="_blank">Book Now</a></button>
+                <button class="book" type="button" id="bookNowBtn">Book Now</button>
             </div>
         </div>
     </div>
@@ -76,8 +94,70 @@
 <footer>
     &copy; 2024 raagtheband. All Rights Reserved.
 </footer>
-         <!-- font awesome script -->
-         <script src="https://kit.fontawesome.com/393ff6bdca.js" crossorigin="anonymous"></script>
+<script>// define all UI variable
+    const navToggler = document.querySelector('.nav-toggler');
+    const navMenu = document.querySelector('.site-navbar ul');
+    const navLinks = document.querySelectorAll('.site-navbar a');
+
+    // load all event listners
+    allEventListners();
+
+    // functions of all event listners
+    function allEventListners() {
+        // toggler icon click event
+        navToggler.addEventListener('click', togglerClick);
+        // nav links click event
+        navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+    }
+
+    // togglerClick function
+    function togglerClick() {
+        navToggler.classList.toggle('toggler-open');
+        navMenu.classList.toggle('open');
+    }
+
+    // navLinkClick function
+    function navLinkClick() {
+        if (navMenu.classList.contains('open')) {
+            navToggler.click();
+        }
+    }</script>
+    <script>
+        document.getElementById('bookNowBtn').addEventListener('click', function() {
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const eventName = document.getElementById('eventName').value;
+            const eventDate = document.getElementById('eventDate').value;
+            const eventPlace = document.getElementById('eventPlace').value;
+            
+            // Construct message
+            const message = `Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AEvent Type: ${eventName}%0AEvent Date: ${eventDate}%0AVenue: ${eventPlace}`;
+            
+            // Send WhatsApp message
+            window.open(`https://wa.me/message/WZQNY3EAESPNB1?text=${message}`, '_blank');
+        });
+    </script>
+    
+    <script>
+        document.getElementById('bookNowBtn').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const eventName = document.getElementById('eventName').value;
+            const eventDate = document.getElementById('eventDate').value;
+            const eventPlace = document.getElementById('eventPlace').value;
+            
+            if (name && phone && email && eventName && eventDate && eventPlace) {
+                const message = `Name: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AEvent Type: ${eventName}%0AEvent Date: ${eventDate}%0AVenue: ${eventPlace}`;
+                window.open(`https://wa.me/message/WZQNY3EAESPNB1?text=${message}`, '_blank');
+            } else {
+                alert('Please fill all fields before booking.');
+            }
+        });
+    </script>
+<script src="https://kit.fontawesome.com/393ff6bdca.js" crossorigin="anonymous"></script>
   </body>
   
   </html>
