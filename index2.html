@@ -7,8 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-      <!-- Preloader HTML -->
-      <div id="loader"></div>
+
     <main  >
         <section class="main">
             <img src="" alt="">
@@ -29,7 +28,7 @@
               
                 <nav class="nav-links">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index2.html">Home</a></li>
                         <li><a href="aboutus.html">About</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -101,9 +100,8 @@
     
     
     
-    
-  <!-- ===============CONTACT CONTAINER================== -->
-  <div class="contact-container">
+   <!-- ===============CONTACT CONTAINER================== -->
+   <div class="contact-container">
     <div class="image">
         <div class="form-box">
             <div class="form">
@@ -145,60 +143,61 @@
     </div>
 </div>
 
+
 <!-- =====================FOOTER====================== -->
 <footer>
     &copy; 2024 raagtheband. All Rights Reserved.
 </footer>
 <script>
   
-  var preloader = document.getElementById('loader');
-  window.addEventListener("load", function(){
-    setTimeout(function() {
-      loader.style.display = 'none';
-    }, 3000); // 2000 milliseconds (2 seconds) delay
-  });
-
-    // counting number script
-    const workSection = document.querySelector(".section-work-data");
-    const workObserver = new IntersectionObserver(
-        (entries, observer) => {
-            const [entry] = entries;
-
-            if (!entry.isIntersecting) return;
-
-            const counterNums = document.querySelectorAll(".counter-numbers");
-            const speed = 200;
-
-            counterNums.forEach((curElem) => {
-                const targetNumber = parseInt(curElem.dataset.number);
-                const updateNumber = () => {
-                    const initialNum = parseInt(curElem.innerText);
-                    const incrementNumber = Math.ceil(targetNumber / speed);
-
-                    if (initialNum < targetNumber) {
-                        if (curElem.dataset.number === "2005") {
-                            curElem.innerText = Math.min(initialNum + incrementNumber, targetNumber);
-                        } else {
-                            curElem.innerText = `${initialNum + incrementNumber}+`;
-                        }
-                        if (initialNum + incrementNumber < targetNumber) {
-                            setTimeout(updateNumber, 10);
-                        }
-                    }
-                };
-
-                updateNumber();
-            });
-
-            observer.unobserve(workSection);
-        }, {
-            root: null,
-            threshold: 0,
-        }
-    );
-
-    workObserver.observe(workSection);
-</script>
+    var preloader = document.getElementById('loader');
+    window.addEventListener("load", function(){
+      setTimeout(function() {
+        loader.style.display = 'none';
+      }, 2000); // 2000 milliseconds (2 seconds) delay
+    });
+  
+      // counting number script
+      const workSection = document.querySelector(".section-work-data");
+      const workObserver = new IntersectionObserver(
+          (entries, observer) => {
+              const [entry] = entries;
+  
+              if (!entry.isIntersecting) return;
+  
+              const counterNums = document.querySelectorAll(".counter-numbers");
+              const speed = 200;
+  
+              counterNums.forEach((curElem) => {
+                  const targetNumber = parseInt(curElem.dataset.number);
+                  const updateNumber = () => {
+                      const initialNum = parseInt(curElem.innerText);
+                      const incrementNumber = Math.ceil(targetNumber / speed);
+  
+                      if (initialNum < targetNumber) {
+                          if (curElem.dataset.number === "2005") {
+                              curElem.innerText = Math.min(initialNum + incrementNumber, targetNumber);
+                          } else {
+                              curElem.innerText = `${initialNum + incrementNumber}+`;
+                          }
+                          if (initialNum + incrementNumber < targetNumber) {
+                              setTimeout(updateNumber, 10);
+                          }
+                      }
+                  };
+  
+                  updateNumber();
+              });
+  
+              observer.unobserve(workSection);
+          }, {
+              root: null,
+              threshold: 0,
+          }
+      );
+  
+      workObserver.observe(workSection);
+  </script>
 <script>
     // whatsapp message
     document.addEventListener('DOMContentLoaded', function () {

@@ -13,11 +13,11 @@ body, html {
 
 .header-area {
     background: black;
-
-
+border: 2px solid white;
+box-sizing: border-box;
     background-size: cover;
-    border-radius: 30px;
-    box-shadow: 2px 2px 20px gray, inset 2px 2px 10px lightgray;
+    border-radius: 0px;
+    /* box-shadow: 2px 2px 20px gray, inset 2px 2px 10px lightgray; */
     margin-bottom: 20px;
     margin-top: 20px;
     height: 80px;
@@ -29,10 +29,10 @@ body, html {
 
 
 /* navbar regular css start */
-.navbar-area {
+/* .navbar-area {
     background: rgba(0, 0, 0, .6);
-    border-bottom: 1px solid #000;
-}
+    border-bottom: 2px solid white;
+} */
 
 .site-navbar {
     display: flex;
@@ -70,11 +70,12 @@ body, html {
 
 /* nav-toggler css start */
 .nav-toggler {
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     padding: 5px;
     background-color: transparent;
     cursor: pointer;
     height: 39px;
+    width: auto;
     display: none;
     right: 10px;
 }
@@ -150,7 +151,7 @@ body, html {
         top: 60px;
         flex-direction: column;
         align-items: center;
-        border-top: 1px solid #444;
+        /* border-top: 1px solid #444; */
         background-color: rgba(0, 0, 0, .75);
         max-height: 0;
         overflow: hidden;
@@ -662,7 +663,7 @@ input:valid~label {
     .contact-container {
         width: 80%;
         padding-inline: 10px;
-        margin-top: 380px;
+        margin-top: 30px;
         margin-bottom: 0; /* Adjusted margin to remove the bottom gap */
     }
 
