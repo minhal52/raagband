@@ -7,7 +7,129 @@
   <title>About us</title>
   <link rel="stylesheet" href="style2.css">
 </head>
+<style>
+ .clients{
+ text-align:center;
+ padding: 20px;
+ color: white;
+}
+/* Slider */
 
+.slick-slide {
+   margin: 0px 20px;
+}
+
+.slick-slide img {
+   width: 100%;
+}
+
+.slick-slider
+{
+   position: relative;
+   display: block;
+   box-sizing: border-box;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+           user-select: none;
+   -webkit-touch-callout: none;
+   -khtml-user-select: none;
+   -ms-touch-action: pan-y;
+       touch-action: pan-y;
+   -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+   position: relative;
+   display: block;
+   overflow: hidden;
+   margin: 0;
+   padding: 0;
+}
+.slick-list:focus
+{
+   outline: none;
+}
+.slick-list.dragging
+{
+   cursor: pointer;
+   cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+   -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+       -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+           transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+   position: relative;
+   top: 0;
+   left: 0;
+   display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+   display: table;
+   content: '';
+}
+.slick-track:after
+{
+   clear: both;
+}
+.slick-loading .slick-track
+{
+   visibility: hidden;
+}
+
+.slick-slide
+{
+   display: none;
+   float: left;
+   height: 100%;
+   min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+   float: right;
+}
+.slick-slide img
+{
+   display: block;
+}
+.slick-slide.slick-loading img
+{
+   display: none;
+}
+.slick-slide.dragging img
+{
+   pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+   display: block;
+}
+.slick-loading .slick-slide
+{
+   visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+   display: block;
+   height: auto;
+   border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+   display: none;
+}
+</style>
 <body>
   <header class="header-area">
     <!-- site-navbar start -->
@@ -118,6 +240,44 @@
       </div>
     </div>
   </section>
+
+  
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  
+  <div class="container">
+    <h1 class="clients">Our  Clients:</h1>
+     <section class="customer-logos slider">
+        <div class="slide"><img src="images/dell.jpg"></div>
+        <div class="slide"><img src="intel4.jpg"></div>
+        <div class="slide"><img src="images/sony.jpg"></div>
+        <div class="slide"><img src="images/apaints.jpg"></div>
+        <div class="slide"><img src="images/marutisuzuki.jpg"></div>
+        <div class="slide"><img src="images/accenture.jpg"></div>
+        <div class="slide"><img src="images/sbi.jpg"></div>
+        <div class="slide"><img src="images/bank.jpg"></div>
+        <div class="slide"><img src="images/forum.jpg"></div>
+        <div class="slide"><img src="images/prestigegroup.jpg"></div>
+        <div class="slide"><img src="images/idea.jpg"></div>
+        <div class="slide"><img src="images/tata.jpg"></div>
+        <div class="slide"><img src="images/adityabirla.jpg"></div>
+        <div class="slide"><img src="images/ultratech.jpg"></div>
+        <div class="slide"><img src="images/dna.jpg"></div>
+        <div class="slide"><img src="images/countryclub.jpg"></div>
+        <div class="slide"><img src="images/lg.jpg"></div>
+        <div class="slide"><img src="images/mahindra.jpg"></div>
+        <div class="slide"><img src="images/lifestyle.jpg"></div>
+        <div class="slide"><img src="images/jsw.jpg"></div>
+        <div class="slide"><img src="images/central.jpg"></div>
+        <div class="slide"><img src="images/bharaticdment.jpg"></div>
+        <div class="slide"><img src="images/apaints.jpg"></div>
+        <div class="slide"><img src="images/oxemberg.jpg"></div>
+        <!-- <div class="slide"><img src="images/dell.jpg"></div> -->
+        <!-- <div class="slide"><img src="images/dell.jpg"></div> -->
+     </section>
+  </div>
   <!-- =====================FOOTER====================== -->
   <footer>
     &copy; 2024 raagtheband. All Rights Reserved.
@@ -267,6 +427,30 @@
 
 
   </script>
+  <script>
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
   <script src="https://kit.fontawesome.com/393ff6bdca.js" crossorigin="anonymous"></script>
 
 </body>
