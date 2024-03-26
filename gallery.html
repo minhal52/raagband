@@ -6,6 +6,42 @@
     <title>Gallery</title>
     <link rel="stylesheet" href="style2.css">
 </head>
+<style>
+  .drivebutton {
+    display: flex;
+    justify-content: center;
+}
+
+.view-more-btn1 {
+    background-color: #fff;
+    color: black;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.view-more-btn1 a{
+  text-decoration: none;
+  font-size: 20px;
+  align-items: center;
+}
+
+.view-more-btn1 a:hover {
+    background-color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.drive-icon {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+</style>
 <body>
   <header class="header-area">
     <!-- site-navbar start -->
@@ -42,7 +78,9 @@
                                 <button> <a href="https://youtube.com/@raagthebandbengaluru" target="_blank"><i
                                             class="fab fa-youtube"></i></a></button>
                                             <button onclick="window.location.href='mailto:raagthebandbengaluru@gmail.com';"><i class="fas fa-envelope"></i></button>
-                    </div>
+                <button> <a href="https://drive.google.com/drive/folders/1oq9FOucRd1MmO9e2AymUQACmTunkBjYE" target="_blank"><i class="fa-brands fa-google-drive"></i></a></button>
+                 
+                                          </div>
                 </div>
             </nav>
 
@@ -224,6 +262,16 @@
         </figure>
       </li>
     </ul>
+
+    <div class="drivebutton">
+      <button class="view-more-btn1">
+          <a href="https://drive.google.com/drive/folders/1oq9FOucRd1MmO9e2AymUQACmTunkBjYE" target="_blank">
+              <i class="fa-brands fa-google-drive"></i> View More
+          </a>
+      </button>
+  </div>
+  
+  
     <footer>
       &copy; 2024 raagtheband. All Rights Reserved.
   </footer>

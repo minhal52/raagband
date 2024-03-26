@@ -43,8 +43,13 @@
                       class="fab fa-whatsapp"></i></a>
                   <button> <a href="https://youtube.com/@raagthebandbengaluru" target="_blank"><i
                         class="fab fa-youtube"></i></a></button>
-                        <button onclick="window.location.href='mailto:raagthebandbengaluru@gmail.com';"><i class="fas fa-envelope"></i></button>
+                  <button onclick="window.location.href='mailto:raagthebandbengaluru@gmail.com';"><i
+                      class="fas fa-envelope"></i></button>
+                <button> <a href="https://drive.google.com/drive/folders/1oq9FOucRd1MmO9e2AymUQACmTunkBjYE" target="_blank"><i class="fa-brands fa-google-drive"></i></a></button>
+
             </div>
+
+
           </div>
         </nav>
 
@@ -68,6 +73,24 @@
       Their diverse repertoire effortlessly enchants audiences with renditions in Hindi, English, Kannada, Tamil,
       Malayalam, and Telugu, bringing immense joy and representing musical excellence.</p>
   </div>
+
+  <!-- ======================================== 
+          Our work counter Section Start  
+    ========================================  -->
+  <section class="section section-work-data">
+    <div class="container2 grid grid-two-column">
+      <div>
+        <h2 class="counter-numbers" data-number="8000">0+</h2>
+        <p>Shows</p>
+      </div>
+      <div>
+        <h2 class="counter-numbers" data-number="2005">0</h2>
+        <p>Since</p>
+      </div>
+
+    </div>
+  </section>
+
   <section>
     <h1 class="our-team">Meet Our Artists</h1>
 
@@ -164,7 +187,7 @@
       displayInfo(i);
     }
   </script>
-   <script>// define all UI variable
+  <script>// define all UI variable
     const navToggler = document.querySelector('.nav-toggler');
     const navMenu = document.querySelector('.site-navbar ul');
     const navLinks = document.querySelectorAll('.site-navbar a');
@@ -174,25 +197,77 @@
 
     // functions of all event listners
     function allEventListners() {
-        // toggler icon click event
-        navToggler.addEventListener('click', togglerClick);
-        // nav links click event
-        navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
+      // toggler icon click event
+      navToggler.addEventListener('click', togglerClick);
+      // nav links click event
+      navLinks.forEach(elem => elem.addEventListener('click', navLinkClick));
     }
 
     // togglerClick function
     function togglerClick() {
-        navToggler.classList.toggle('toggler-open');
-        navMenu.classList.toggle('open');
+      navToggler.classList.toggle('toggler-open');
+      navMenu.classList.toggle('open');
     }
 
     // navLinkClick function
     function navLinkClick() {
-        if (navMenu.classList.contains('open')) {
-            navToggler.click();
-        }
-    }</script>
-<script src="https://kit.fontawesome.com/393ff6bdca.js" crossorigin="anonymous"></script>
+      if (navMenu.classList.contains('open')) {
+        navToggler.click();
+      }
+    }
+
+    var preloader = document.getElementById('loader');
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        loader.style.display = 'none';
+      }, 3000); // 2000 milliseconds (2 seconds) delay
+    });
+
+    // counting number script
+    const workSection = document.querySelector(".section-work-data");
+    const workObserver = new IntersectionObserver(
+      (entries, observer) => {
+        const [entry] = entries;
+
+        if (!entry.isIntersecting) return;
+
+        const counterNums = document.querySelectorAll(".counter-numbers");
+        const speed = 200;
+
+        counterNums.forEach((curElem) => {
+          const targetNumber = parseInt(curElem.dataset.number);
+          const updateNumber = () => {
+            const initialNum = parseInt(curElem.innerText);
+            const incrementNumber = Math.ceil(targetNumber / speed);
+
+            if (initialNum < targetNumber) {
+              if (curElem.dataset.number === "2005") {
+                curElem.innerText = Math.min(initialNum + incrementNumber, targetNumber);
+              } else {
+                curElem.innerText = `${initialNum + incrementNumber}+`;
+              }
+              if (initialNum + incrementNumber < targetNumber) {
+                setTimeout(updateNumber, 10);
+              }
+            }
+          };
+
+          updateNumber();
+        });
+
+        observer.unobserve(workSection);
+      }, {
+      root: null,
+      threshold: 0,
+    }
+    );
+
+    workObserver.observe(workSection);
+
+
+
+  </script>
+  <script src="https://kit.fontawesome.com/393ff6bdca.js" crossorigin="anonymous"></script>
 
 </body>
 
