@@ -119,13 +119,13 @@ margin-top: 0;
     color: #fff; /* Set text color to white */
 
 }
-.subtitle1{
+.subtitle1 {
     color: #fff;
-    font-size: 24px;
+    font-size: 32px;
     top: 0;
     letter-spacing: 15px;
     text-align: center;
-    
+    margin-top: -20px; /* Adjust this value as needed */
 }
 
 .nav-links ul {
@@ -225,6 +225,12 @@ margin-top: 0;
         width: 100px;
     }
     }
+    @media only screen and (max-width: 375px) {
+        /* Styles specifically for iPhone screens */
+        .book-now-btn {
+            width: 100px;
+        }
+    }
 /* .book-now-btn {
     font-size: 30px;
     padding: 20px ;
@@ -267,14 +273,14 @@ transform: translateX(0);
     font-size: 20px;
     position: relative; /* Add relative positioning to the link */
 }
-.subtitle1{
+/* .subtitle1{
     color: #fff;
     font-size: 16px;
     top: 0;
     letter-spacing: 15px;
     text-align: center;
     
-}
+} */
 .logo {
     position: absolute;
     top: 30px;
@@ -287,6 +293,25 @@ transform: translateX(0);
 }
 
 }
+@media only screen and (max-width: 375px) {
+    /* Styles specifically for iPhone screens */
+    .social-icons button{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* Styles for screens up to 767px wide (typically mobile devices) */
+    .subtitle1 {
+        color: #fff;
+        font-size: 12px;
+        top: 0;
+        letter-spacing: 15px;
+        text-align: center;
+        margin-top: -18px; /* Adjust this value as needed */
+    }
+}
+
 
 /* ============================waves */
 .waves-demo {
