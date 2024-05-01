@@ -845,7 +845,7 @@ footer {
 
 .counter-numbers {
   color: #fff;
-  margin: 20px auto 0; /* Margin top added and margin bottom set to 0, auto for horizontal centering */
+  margin: 40px auto 0; 
   font-size: 40px;
   text-align: center;
 }
@@ -857,4 +857,31 @@ footer {
   text-align: center;
   color: #fff;
 }
+
+
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  /* Your CSS rules specific to iPhone 13, 14, and 15 go here */
+  /* For example, you can include styles for your container or elements */
+  .container2 {
+
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 40px;
+      /* margin-top: 40px; This will push the container to the bottom of its parent */
+ 
+  }
+
+  .counter-numbers {
+    color: #fff;
+    /* margin: 20px auto 0; Margin top added and margin bottom set to 0, auto for horizontal centering */
+    font-size: 40px;
+    /* margin-top: 80px; */
+    text-align: center;
+  }
+  
+  
+}
+  /* Include other styles as needed */
+
 
