@@ -129,6 +129,30 @@
 .slick-arrow.slick-hidden {
    display: none;
 }
+
+/* =================our clients============== */
+.logo-grid1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 10px;
+}
+
+.logo-grid1 li {
+  text-align: center;
+}
+
+.logo-grid1 img {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below images */
+  margin: 0 auto; /* Center images horizontally */
+}
+
+
+
 </style>
 <body>
   <header class="header-area">
@@ -212,14 +236,14 @@
 
     </div>
   </section>
-
+<!-- =====================ARTISTS=============== -->
   <section>
     <h1 class="our-team">Meet Our Artists</h1>
 
     <div class="team-container">
-      <div class="team-img" onmouseover="fetchInfo(0)"><img src="savad222.jpg" alt=""></div>
-      <div class="team-img" onmouseover="fetchInfo(1)"><img src="divya1.jpg" alt=""></div>
-      <div class="team-img" onmouseover="fetchInfo(2)"><img src="images/sanjith33.jpg" alt=""></div>
+      <div class="team-img" onmouseover="fetchInfo(0)"><img src="images/savadnew.jpg" alt=""></div>
+      <div class="team-img" onmouseover="fetchInfo(1)"><img src="divyanew.jpg" alt=""></div>
+      <div class="team-img" onmouseover="fetchInfo(2)"><img src="sanjithnew.jpg" alt=""></div>
       <div class="team-img" onmouseover="fetchInfo(3)"><img src="deepak1.jpg" alt=""></div>
     </div>
     <div class="team-container">
@@ -240,44 +264,54 @@
       </div>
     </div>
   </section>
-
+  <!-- ===our clients logo==================== -->
   
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <ul class="logo-grid1" style="background-color: white; margin-top: 20px;" >
+      <li><img src="images/logo1.jpg" alt="Logo 1"></li>
+      <li><img src="images/logo2.jpg" alt="Logo 2"></li>
+      <li><img src="images/logo3.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo4.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo5.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo6.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo7.jpg" alt="Logo 1"></li>
+      <li><img src="images/logo8.jpg" alt="Logo 2"></li>
+      <li><img src="images/logo9.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo10.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo11.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo12.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo13.jpg" alt="Logo 1"></li>
+      <li><img src="images/logo14.jpg" alt="Logo 2"></li>
+      <li><img src="images/logo15.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo16.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo17.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo18.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo19.jpg" alt="Logo 1"></li>
+      <li><img src="images/logo20.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo21.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo22.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo23.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo24.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo25.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo26.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo27.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo28.jpg" alt="Logo 1"></li>
+     <li><img src="images/logo29.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo30.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo31.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo32.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo33.jpg" alt="Logo 1"></li>
+      <li><img src="images/logo34.jpg" alt="Logo 3"></li>
+      <li><img src="images/logo35.jpg" alt="Logo 4"></li>
+      <li><img src="images/logo36.jpg" alt="Logo 5"></li>
+      <li><img src="images/logo37.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo38.jpg" alt="Logo 1"></li>
+      <li><img src="images/logo39.jpg" alt="Logo 6"></li>
+      <li><img src="images/logo40.jpg" alt="Logo 1"></li>
+<p style="margin-top: 40px; font-weight: bold;font-size: 16px;">and many more...</p>
+      <!-- Add more logo images here -->
+    </ul>
+ 
   
-  <div class="container">
-    <h1 class="clients">Our  Clients:</h1>
-     <section class="customer-logos slider">
-        <div class="slide"><img src="images/dell.jpg"></div>
-        <div class="slide"><img src="intel4.jpg"></div>
-        <div class="slide"><img src="images/sony.jpg"></div>
-        <div class="slide"><img src="images/apaints.jpg"></div>
-        <div class="slide"><img src="images/marutisuzuki.jpg"></div>
-        <div class="slide"><img src="images/accenture.jpg"></div>
-        <div class="slide"><img src="images/sbi.jpg"></div>
-        <div class="slide"><img src="images/bank.jpg"></div>
-        <div class="slide"><img src="images/forum.jpg"></div>
-        <div class="slide"><img src="images/prestigegroup.jpg"></div>
-        <div class="slide"><img src="images/idea.jpg"></div>
-        <div class="slide"><img src="images/tata.jpg"></div>
-        <div class="slide"><img src="images/adityabirla.jpg"></div>
-        <div class="slide"><img src="images/ultratech.jpg"></div>
-        <div class="slide"><img src="images/dna.jpg"></div>
-        <div class="slide"><img src="images/countryclub.jpg"></div>
-        <div class="slide"><img src="images/lg.jpg"></div>
-        <div class="slide"><img src="images/mahindra.jpg"></div>
-        <div class="slide"><img src="images/lifestyle.jpg"></div>
-        <div class="slide"><img src="images/jsw.jpg"></div>
-        <div class="slide"><img src="images/central.jpg"></div>
-        <div class="slide"><img src="images/bharaticdment.jpg"></div>
-        <div class="slide"><img src="images/apaints.jpg"></div>
-        <div class="slide"><img src="images/oxemberg.jpg"></div>
-        <!-- <div class="slide"><img src="images/dell.jpg"></div> -->
-        <!-- <div class="slide"><img src="images/dell.jpg"></div> -->
-     </section>
-  </div>
   <!-- =====================FOOTER====================== -->
   <footer>
     &copy; 2024 raagtheband. All Rights Reserved.
@@ -288,19 +322,19 @@
         name: "Savadyou",
         status: "",
         about: "Savadyou is a versatile artist known for his roles as a playback singer, live performer, and music composer. His singing style blends various cultural influences, ranging from Hindustani classical music to the pop genre, including Bollywood and Sandalwood film industry songs. He has lent his voice to numerous albums, encompassing genres like pop, hip-hop, ghazals, and semi-classical. Savadyou's passion lies in exploring and experiencing all genres of music, refusing to confine himself to just one.\n\nAs a highly acclaimed live performer in Bangalore, Savadyou received formal training in Hindustani music from Padmashree Pandith Dr. Krishna Ballesh in Chennai, a student of Ustad Bismillah Khan. He has graced over 5000 stage shows across various cities in India and has also performed in countries abroad. Sharing the stage with renowned celebrity singers, Savadyou has established himself as a prominent figure in the music industry.",
-        image: "savad111.jpg"
+        image: "images/savadnew.jpg"
       },
       {
         name: "Divya Ramachandra",
         status: "",
         about: "Divya Ramachandra, an accomplished vocalist, has garnered recognition through her impressive appearances on various reality shows. Some notable shows include Confident Star Singer on Suvarna Channel, Kannadave Sathya Kannadave Nithya on Kasturi, and Kannada Kogile Season-2 on Colours Super. Her exceptional talent has earned her prestigious awards such as the Bala Sangeetha Kala Shreenidhi award at Gadag Mahila Mattu Makkala Samskruthika Sammelana, Voice of Malenadu, and the runner-up position in Singing Star of Karnataka.\n\nFurthermore, Divya Ramachandra has made valuable contributions to the Kannada playback singing domain, lending her voice to popular songs like:\n- 'Manchali Liger'\n- 'Nethi Mele Thoogo Kathi Jagame Thandhiram'\n- 'Rakita Rakita Jagame Thandhiram'\n- 'Hudugirgu Hudugarigu Namak Haraam'\n- 'Malli Malli Raana'\n- 'Aafat Liger'",
-        image: "divyaramchandran.jpg"
+        image: "divyanew.jpg"
       },
       {
         name: "Sanjith",
         status: "",
         about: "Sanjith, an exceptionally talented vocalist, offers a distinctive fusion of musical influences in his performances. From Hindustani classical to Bollywood and Sandalwood songs, he effortlessly transitions between genres like pop, hip-hop, sufi, and ghazals. Based in Bangalore and hailing from Kerala, Sanjith has established himself as a sought-after live performer with Raag the Band. With a training background in Hindustani music, he has lent his melodious voice to numerous Malayalam and Tamil films. Having mesmerized audiences across India and abroad in over 4000 stage shows, Sanjith has shared the spotlight with renowned celebrities like Shahrukh Khan, KK, Nakash Azeez, and more.",
-        image: "images/sanjith22.jpg"
+        image: "sanjithnew.jpg"
       },
       {
         name: "Deepak",

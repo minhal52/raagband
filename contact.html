@@ -232,7 +232,7 @@ box-sizing: border-box;
 .contact-container {
     position: relative;
     width: 350px;
-    height: 600px;
+    height: 600px; /* Increased height */
     background: rgba(0, 0, 0, 0.75);
     border-radius: 20px;
     display: flex;
@@ -240,11 +240,11 @@ box-sizing: border-box;
     align-items: center;
     padding-inline: 32px;
     overflow: hidden;
-    margin: auto;
+    margin: auto; /* Center the container */
     margin-top: 50px;
     margin-bottom: 50px;
-    z-index: 900; /* Set a lower z-index value than .site-navbar */
 }
+
 .contact-container::before {
     content: "";
     position: absolute;
@@ -293,7 +293,6 @@ box-sizing: border-box;
     font-size: 32px;
     color: #fff;
     text-align: center;
-    margin-top: 20px;
 }
 
 .form .input-box {
@@ -402,18 +401,19 @@ input:valid~label {
     .contact-container {
         width: 80%;
         padding-inline: 10px;
-        margin-top: 30px;
-        margin-bottom: 0; /* Adjusted margin to remove the bottom gap */
+        margin-top: 800px;
+        margin-bottom: 5px; /* Adjusted margin to remove the bottom gap */
+   /* top: 180px; */
     }
 
     .contact-container::before,
     .contact-container::after {
-        height: 450px;
-        width: 450px;
+        height: 750px;
+        width: 750px;
     }
 
     .form-box {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .form .input-box {
