@@ -840,11 +840,12 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 40px;
+  margin-top: auto; /* This will push the container to the bottom of its parent */
 }
 
 .counter-numbers {
   color: #fff;
-  margin: 0; /* Reset margin */
+  margin: 20px auto 0; /* Margin top added and margin bottom set to 0, auto for horizontal centering */
   font-size: 40px;
   text-align: center;
 }
@@ -856,3 +857,4 @@ footer {
   text-align: center;
   color: #fff;
 }
+
