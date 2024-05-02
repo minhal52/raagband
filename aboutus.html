@@ -30,6 +30,21 @@
   margin: 0 auto; /* Center images horizontally */
 }
 
+/* For mobile screen */
+@media only screen and (max-width: 600px) {
+  .logo-grid1 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* For medium screen */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .logo-grid1 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
 </style>
 <body>
   <header class="header-area">
@@ -142,7 +157,7 @@
     </div>
   </section>
   <!-- ===our clients logo==================== -->
-  
+  <h1 style="font-size:22px; font-weight: bold; margin-top: 22px;">Our Clients : </h1>
     <ul class="logo-grid1" style="background-color: white; margin-top: 20px;" >
       <li><img src="images/logo1.jpg" alt="Logo 1"></li>
       <li><img src="images/logo2.jpg" alt="Logo 2"></li>
